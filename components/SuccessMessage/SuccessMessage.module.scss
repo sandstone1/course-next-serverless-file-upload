@@ -1,0 +1,42 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import '../../styles/_color_variables.scss';
+@import '../../styles/_font_variables.scss';
+
+
+.successMessageContainer {
+    
+    position              : relative;
+    width                 : 100%;
+    margin                : 3.0rem 0 6.0rem 0;
+    padding               : 2.0rem;
+
+    border-radius : 3px;
+
+    // green gradiant
+    background : linear-gradient( 60deg, rgba( 150, 222, 218, 1 ) 0%, rgba( 80, 201, 195, 1 ) 100% );
+
+    > h3 {
+
+        font-family : $font-primary-4;
+        font-size   : 1.6rem;
+        font-weight : 400;
+        color       : $black;
+
+    } // end of h3
+
+    > span {
+
+        position : absolute;
+        top      : 8px;
+        right    : 8px;
+
+        cursor : pointer;
+
+    } // end of span
+
+} // end of the success message container

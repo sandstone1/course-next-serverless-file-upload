@@ -1,0 +1,53 @@
+
+
+
+// ==============================
+// MIXINS
+// ==============================
+
+
+// ==============================
+// BUTTON MIXIN
+// ==============================
+
+@mixin button {
+
+    padding : 1.8rem 3.0rem;
+
+    border        : none; // get rid of the default border
+    border-radius : 0; // get rid of the default radius
+
+    outline : none;
+
+    font-family    : $font-primary-2;
+    font-size      : 1.5rem;
+    color          : rgba( 255, 255, 255, 1 );
+    text-align     : center;
+    text-transform : uppercase;
+
+    background : $blue-500;
+
+    transition : all 0.2s ease-out;
+    cursor     : pointer;
+
+    &:hover {
+
+        background : $blue-600;
+
+    }
+
+} // end of @mixin button
+
+
+// ==============================
+// FORM LABEL MIXIN
+// ==============================
+
+@mixin shrinkLabel {
+
+    top : -20px;
+
+    font-size : 1.4rem;
+    color     : $gray-700;
+
+}

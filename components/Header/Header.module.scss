@@ -1,0 +1,45 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import '../../styles/_color_variables.scss';
+@import '../../styles/_font_variables.scss';
+@import '../../styles/_responsive_breakpoints.scss';
+
+
+.headerContainer {
+
+    grid-area       : header;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    margin          : 0 0 0 0;
+
+    background : $gray-background-1;
+
+    > h4 > a {
+
+        padding : 1.0rem 2rem;
+
+        border        : 1px solid rgba( 150, 150, 150, 1 );
+        border-radius : 6px;
+
+        font-family    : $font-primary-4;
+        font-size      : 3.6rem;
+        color          : $white;
+        letter-spacing : 0.5px;
+        text-align     : center;
+
+        @media all and ( max-width : $bp-620 ) {
+
+            border : none;     
+
+        }
+
+    } // end of h4
+
+} // end of header
+
+

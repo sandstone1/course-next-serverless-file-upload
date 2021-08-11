@@ -1,0 +1,159 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import './_color_variables.scss';
+@import './_font_variables.scss';
+@import './_responsive_breakpoints.scss';
+
+
+
+// ==============================
+// FONT STYLES
+// ==============================
+
+@import url( "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Nothing+You+Could+Do&family=Nunito:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;700;800&family=Rancho&family=Roboto:wght@100;300;400;900&family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap" );
+
+@import url( 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' );
+
+
+
+// ==============================
+// MY BASE STYLES
+// ==============================
+
+// start with a global reset
+* {
+
+    margin  : 0;
+    padding : 0;
+
+    box-sizing : border-box;
+
+}
+
+
+// styles for the html section
+html {
+
+    font-size : 62.5%; // 1 rem = 10px
+    
+    @media all and ( max-width : $bp-1280 ) {
+
+        // remember we want to reduce the font on smaller screens and we do that by using
+        // media queries and changing the font size, in this case, from
+        // " font-size : 62.5%; " to " font-size : 50.0%; " so for example, if our fonts for
+        // an element was defined at 2rem or 20px on large screens or screens larger than
+        // 1200px, now our font will be reduced to 16px ( 50% * 16px = 8px * 2rem = 16px )
+        // automatically on small screens or screens less than 1200px and all this is the
+        // result from using this one media query
+
+        // so now 1rem equals 8px
+
+        // I tested this and it works and looks good
+
+        // once our viewport shrinks to 1000px and below then we'll move the sidebar to the
+        // top of the container and to do that let's start by adding a new breakpoint above
+        // and then go to homepage.styles.scss
+
+        font-size : 50%;
+
+    }
+
+} // end of html
+
+
+// styles for the body section
+body {
+
+    overflow-x : hidden; // get rid of horizontal scroll bar
+
+    font-family : $font-primary-4;
+    font-size   : 1.6rem;
+    // font-weight : 300;
+    color       : $gray-800;
+    line-height : 1.6;
+
+    // background : rgba( 227, 227, 232, 1 );
+    // let's go with a white background for this site
+    background : rgba( 255, 255, 255, 1 );
+
+    /*
+    @media all and ( max-width : $bp-480 ) {
+
+        background : rgba( 255, 255, 255, 1 );
+
+    }
+    */
+
+    @media all and ( max-width : $bp-320 ) {
+
+        overflow-x : scroll;
+
+    }
+
+} // end of body
+
+
+a {
+
+    color           : $blue-webkit-link;
+    text-decoration : none;
+
+} // end of a
+
+
+ul {
+
+    list-style : none;
+
+} // end of ul
+
+
+// w3schools said: " How To Create Responsive Images? If you want the image to scale
+// both up and down on responsiveness, set the CSS width property to 100% and height
+// to auto ( i.e. { width : 100%; height : auto; } ) " and " If you want an image to
+// scale down if it has to, but never scale up to be larger than its original size,
+// use max-width: 100%; ( i.e. { max-width : 100%; height : auto; } ) "
+img {
+
+    max-width : 100%;
+    height    : auto;
+
+} // end of image
+
+
+// center all
+.center-all {
+
+    display         : grid;
+    justify-content : center;
+    align-content   : center;
+    justify-items   : center;
+    align-items     : center;
+
+} // end of center-all
+
+
+// special styles to apply to all pages
+input::-moz-focus-inner { // remove input padding in FF
+
+	padding : 0;
+
+    border  : 0;
+
+}
+
+
+// make sure IE10 works in snap mode
+@-ms-viewport {
+
+    width : device-width;
+
+}
+
+
+
+

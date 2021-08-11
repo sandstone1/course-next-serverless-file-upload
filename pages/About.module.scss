@@ -1,0 +1,29 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import '../styles/_color_variables.scss';
+@import '../styles/_font_variables.scss';
+
+
+.aboutContainer {
+
+    margin : 9.0rem 0 5.0rem 0;
+
+    > h1 {
+
+        margin : 0 0 1.5rem 0;
+
+    } // end of h1
+
+    > p {
+
+        margin : 0 0 0.8rem 0;
+
+        color : $gray-800;
+
+    } // end of p
+
+} // end of about container

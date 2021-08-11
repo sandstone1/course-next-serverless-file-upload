@@ -1,0 +1,19 @@
+
+
+// ==============================
+// RESPONSIVE BREAKPOINTS
+// ==============================
+
+
+$bp-1617 : 1617px; // 1600 + 17 (added 17px to compensate for Firefox including the scroll bar width as part of the browser width and therefore causing problems with the media queries) = 1617
+$bp-1383 : 1383px; // 1366 + 17 (added 17px to compensate for Firefox including the scroll bar width as part of the browser width and therefore causing problems with the media queries) = 1383
+$bp-1280 : 1280px;
+$bp-1024 : 1024px;
+$bp-920  : 920px;
+$bp-768  : 768px;
+$bp-620  : 620px;
+$bp-480  : 480px;
+$bp-375  : 375px;
+$bp-320  : 320px;
+
+

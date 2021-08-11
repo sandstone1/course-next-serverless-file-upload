@@ -1,0 +1,187 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import '../../styles/_color_variables.scss';
+@import '../../styles/_font_variables.scss';
+@import '../../styles/_responsive_breakpoints.scss';
+@import '../../styles/_mixins.scss';
+
+
+.fileUploadContainer {
+
+    display               : grid;
+    grid-template-rows    : auto;
+    grid-template-columns : 1fr;
+    justify-content       : start;
+    margin                : 8.0rem 1.0rem 1.0rem 1.0rem;
+    padding               : 3.0rem;
+
+    background : rgba( 240, 240, 240, 1 );
+
+    @media all and ( max-width : $bp-480 ) {
+
+        grid-template-columns : 1fr;
+        max-width             : 380px;
+
+    }
+
+    > h1 {
+
+        font-family    : $font-primary-4;
+        font-size      : 3.6rem;
+        color          : $gray-700;
+        letter-spacing : 0.5px;
+        text-align     : center;
+
+    } // end of h1
+
+    .fileUploadContainerForm {
+
+        .fileUploadContainerFormFileInputContainer {
+
+            display         : flex;
+            align-items     : center;
+            width           : 100%;
+            margin          : 4.0rem 0 0 0;
+            padding         : 0 0 0 0;
+    
+            // input styles from codrops
+            > input:nth-child( 1 ) {
+
+                position : absolute;
+                width    : 0.1px;
+                height   : 0.1px;
+                z-index  : -1;
+    
+                opacity  : 0;
+                overflow : hidden;
+                
+            } // end of input
+
+            > input:nth-child( 2 ) {
+
+                width   : calc( 100% - 111.08px );
+                height  : 4.8rem;
+                padding : 1.2rem 2.0rem;
+
+                border : 1px solid rgba( 220, 220, 220, 1 );
+
+                font-family : $font-primary-2;
+                font-size   : 1.8rem;
+                color       : $black;
+
+                background: $white;
+
+                outline : none;
+
+                    @media all and ( max-width : $bp-1280 ) {
+
+                        width : calc( 100% - 90.06px );
+
+                    }
+
+                    @media all and ( max-width : $bp-375 ) {
+
+                        position : absolute; // remove the input field on small screens
+                        width    : 0.1px;
+                        height   : 0.1px;
+                        z-index  : -1;
+            
+                        opacity  : 0;
+                        overflow : hidden;
+
+                    }
+                
+            } // end of input
+    
+            // label
+            > label {
+    
+                @include button();
+
+                margin  : 0 0 0 0;      
+                padding : 1.2rem 2.0rem;
+
+                letter-spacing : 1px;
+    
+                background : $gray-750;
+        
+                cursor : pointer;
+
+                @media all and ( max-width : $bp-375 ) {
+
+                    width   : 100%; // make the button span the width of the container on small
+                    // screens
+                    padding : 1.8rem 3.0rem; // match the initial padding
+
+                }
+
+                &:hover {
+        
+                    background : $gray-800;
+        
+                }
+        
+            } // end of label
+
+        } // end of file input container
+
+
+        .fileUploadContainerFormButtonContainer {
+
+            display : grid;
+            margin  : 6.0rem 0 0 0;
+
+            > button {
+
+                @include button();          
+    
+                letter-spacing : 1px;
+
+                background : $blue-100;
+        
+                // had to do " outline : none; " in order to get rid of the weird outline or coloring
+                // around the button element after clicking the button
+                outline : none;
+        
+                &:hover {
+        
+                    background : rgba( 42, 119, 201, 1 );;
+        
+                }
+
+            } // end of button
+
+        } // end of button container
+
+    } // end of form
+
+    .fileUploadContainerFile {
+        
+        > h3 {
+
+            margin  : 6.0rem 0 0 0;
+
+            font-family : $font-primary-2;
+            font-size   : 1.7rem;
+            color       : $steel-blue-200;
+            text-align  : center;
+
+        } // end of h3
+
+        > img {
+
+            display         : flex;
+            justify-content : space-between;
+            max-width       : 100%;
+            height          : auto;
+            margin          : 6.0rem auto 0 auto;
+
+        } // end of img
+
+    } // end of file
+
+} // end of file upload container

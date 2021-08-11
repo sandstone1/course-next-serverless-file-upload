@@ -1,0 +1,338 @@
+
+
+// ==============================
+// BASE STYLES
+// ==============================
+
+
+
+// ==============================
+// FONT STYLES
+// ==============================
+
+
+@import url( "https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,400;1,400&family=Nothing+You+Could+Do&family=Nunito:ital,wght@0,300;1,300&family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;700;800&family=Rancho&family=Roboto:wght@100;300;400;900&family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap" );
+
+@import url( 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap' );
+
+
+
+// ==============================
+// RESPONSIVE BREAKPOINTS
+// ==============================
+
+
+$bp-1617 : 1617px; // 1600 + 17 (added 17px to compensate for Firefox including the scroll bar width as part of the browser width and therefore causing problems with the media queries) = 1617
+$bp-1383 : 1383px; // 1366 + 17 (added 17px to compensate for Firefox including the scroll bar width as part of the browser width and therefore causing problems with the media queries) = 1383
+$bp-1280 : 1280px;
+$bp-1024 : 1024px;
+$bp-920  : 920px;
+$bp-768  : 768px;
+$bp-620  : 620px;
+$bp-480  : 480px;
+$bp-375  : 375px;
+$bp-320  : 320px;
+
+
+
+// ==============================
+// COLOR VARAIBLES
+// ==============================
+
+
+$white    : rgba( 255, 255, 255, 1 );
+$gray-100 : rgba( 248, 249, 250, 1 );
+$gray-200 : rgba( 247, 247, 249, 1 );
+$gray-225 : rgba( 245, 245, 245, 1 );
+$gray-300 : rgba( 236, 238, 239, 1 );
+$gray-310 : rgba( 235, 237, 238, 1 );
+$gray-400 : rgba( 206, 212, 218, 1 );
+$gray-500 : rgba( 173, 181, 189, 1 );
+$gray-600 : rgba( 145, 154, 161, 1 );
+$gray-700 : rgba( 85, 89, 92, 1 );
+$gray-800 : rgba( 52, 58, 64, 1 );
+$gray-900 : rgba( 26, 26, 26, 1 );
+$black    : rgba( 0, 0, 0, 1 );
+
+
+$blue-50           : rgba( 240, 255, 255, 1 );
+$blue-100          : rgba( 62, 139, 221, 1 );
+$blue-200          : rgba( 94, 125, 187, 1 );
+$blue-250          : rgba( 65, 105, 225, 1 );
+$blue-300          : rgba( 74, 105, 167, 1 );
+$blue-400          : rgba( 64, 99, 171, 1 );
+$blue-500          : rgba( 44, 79, 151, 1 );
+$blue-600          : rgba( 24, 59, 131, 1 );
+$blue-700          : rgba( 25, 25, 112, 1 );
+$blue-725          : rgba( 0, 0, 139, 1 );
+$blue-webkit-link  : rgba( 0, 0, 238, 1 );
+$blue-background-1 : rgba( 0, 20, 61, 1 );
+$blue-background-2 : rgba( 16, 29, 44, 1 );
+$indigo            : rgba( 102, 16, 242, 1 );
+$purple            : rgba( 111, 66, 193, 1 );
+$pink              : rgba( 232, 62, 140, 1 );
+$red-100           : rgba( 220, 53, 69, 1 );
+$red-200           : rgba( 217, 83, 79, 1 );
+$red-300           : rgba( 178, 34, 34, 1 );
+$brown-100         : rgba( 160, 82, 45, 1 );
+$brown-200         : rgba( 165, 42, 42, 1 );
+$brown-300         : rgba( 139, 69, 19, 1 );
+$orange            : rgba( 253, 126, 20, 1 );
+$yellow-100        : rgba( 255, 255, 0, 1 );
+$yellow-200        : rgba( 248, 232, 37, 1 );
+$yellow-300        : rgba( 240, 173, 78, 1 );
+$green-100         : rgba( 75, 191, 115, 1 );
+$green-200         : rgba( 60, 188, 141, 1 );
+$gold-100          : rgba( 198, 153, 99, 1 );
+$gold-200          : rgba( 178, 132, 81, 1 );
+$silver            : rgba( 211, 211, 211, 1 );
+$teal              : rgba( 32, 201, 151, 1 );
+$cyan-100          : rgba( 31, 155, 207, 1 );
+$cyan-200          : rgba( 11, 135, 187, 1 );
+$cyan-300          : rgba( 0, 139, 139, 1 );
+$slate-gray-100    : rgba( 119, 136, 153, 1 );
+$slate-gray-200    : rgba( 112, 128, 144, 1 );
+$slate-gray-300    : rgba( 47, 79, 79, 1 );
+$slate-gray-300    : rgba( 47, 79, 79, 1 );
+$steel-blue-100    : rgba( 176, 196, 222, 1 );
+$steel-blue-200    : rgba( 70, 130, 180, 1 );
+$gray-150          : rgba( 249, 247, 246, 1 );
+$gray-325          : rgba( 226, 228, 229, 1 );
+$gray-335          : rgba( 220, 220, 222, 1 );
+$gray-350          : rgba( 211, 211, 211, 1 );
+$gray-550          : rgba( 170, 170, 170, 1 );
+$gray-650          : rgba( 128, 128, 128, 1 );
+$gray-675          : rgba( 105, 105, 105, 1 );
+$gray-725          : rgba( 109, 93, 75, 1 );
+$gray-735          : rgba( 84, 72, 58, 1 );
+$gray-750          : rgba( 74, 80, 90, 1 );
+$gray-850          : rgba( 54, 60, 70, 1 );
+
+$gray-gradient-right        : linear-gradient( 120deg, rgba( 233, 235, 237, 1 ) 0%, rgba( 249, 247, 247, 1 ) 100% );
+$gray-gradient-right-hover  : linear-gradient( 120deg, rgba( 228, 230, 232, 1 ) 0%, rgba( 244, 242, 242, 1 ) 100% );
+$gray-gradient-left         : linear-gradient( 120deg, rgba( 253, 251, 251, 1 ) 0%, rgba( 235, 237, 238, 1 ) 100% );
+$gray-gradient-left-hover   : linear-gradient( 120deg, rgba( 248, 246, 246, 1 ) 0%, rgba( 230, 232, 233, 1 ) 100% );
+$gray-gradient-to-top       : linear-gradient( to top, rgba( 223, 233, 243, 1 ) 0%, rgba( 255, 255, 255, 1 ) 100% );
+$gray-gradient-to-top-hover : linear-gradient( to top, rgba( 218, 228, 238, 1 ) 0%, rgba( 250, 250, 250, 1 ) 100% );
+
+
+$primary   : $gray-900;
+$secondary : $white;
+$success   : $green-100;
+$info      : $cyan-100;
+$warning   : $yellow-300;
+$danger    : $red-200;
+$light     : $white;
+$dark      : $gray-800;
+
+
+$blue-background-1 : linear-gradient( 90deg, rgba( 15, 50, 85, 1 ) 0%, rgba( 15, 50, 85, 1 ) 50%, rgba( 35, 70, 105, 1 ) 100% );
+$blue-background-2 : linear-gradient( 90deg, rgba( 30, 96, 128, 1 ) 0%, rgba( 72, 88, 135, 1 ) 50%, rgba( 15, 102, 110, 1 ) 100% );
+$gray-background-1 : linear-gradient( 90deg, rgba( 61, 71, 98, 1 ) 0%, rgba( 61, 61, 70, 1 ) 50%, rgba( 61, 71, 98, 1 ) 100% );
+$gray-background-2 : linear-gradient( 90deg, rgba( 22, 30, 51, 1 ) 0%, rgba( 61, 61, 70, 1 ) 50%, rgba( 22, 30, 51, 1 ) 100%);
+
+
+
+// ==============================
+// FONT VARIABLES
+// ==============================
+
+$font-primary-1  : 'Open Sans', Arial, sans-serif;
+$font-primary-2  : 'Nunito', Arial, sans-serif;
+$font-primary-3  : 'Source Sans Pro', Arial, sans-serif;
+$font-primary-4  : 'Poppins', Arial, sans-serif;
+$font-primary-5  : 'Courier New', Courier, monospace;
+$font-display-1  : 'Open Sans Condensed', Arial, sans-serif;
+$font-display-2  : 'Josefin Sans', Arial, sans-serif;
+
+
+
+// ==============================
+// MY BASE STYLES
+// ==============================
+
+// start with a global reset
+* {
+
+    margin  : 0;
+    padding : 0;
+
+    box-sizing : border-box;
+
+}
+
+
+// styles for the html section
+html {
+
+    font-size : 62.5%; // 1 rem = 10px
+    
+    @media all and ( max-width : $bp-1280 ) {
+
+        // remember we want to reduce the font on smaller screens and we do that by using
+        // media queries and changing the font size, in this case, from
+        // " font-size : 62.5%; " to " font-size : 50.0%; " so for example, if our fonts for
+        // an element was defined at 2rem or 20px on large screens or screens larger than
+        // 1200px, now our font will be reduced to 16px ( 50% * 16px = 8px * 2rem = 16px )
+        // automatically on small screens or screens less than 1200px and all this is the
+        // result from using this one media query
+
+        // so now 1rem equals 8px
+
+        // I tested this and it works and looks good
+
+        // once our viewport shrinks to 1000px and below then we'll move the sidebar to the
+        // top of the container and to do that let's start by adding a new breakpoint above
+        // and then go to homepage.styles.scss
+
+        font-size : 50%;
+
+    }
+
+} // end of html
+
+
+// styles for the body section
+body {
+
+    overflow-x : hidden; // get rid of horizontal scroll bar
+
+    // font-family : $font-primary-1;
+    font-family : 'Poppins', sans-serif;
+    font-size   : 1.6rem;
+    // font-weight : 300;
+    color       : $gray-800;
+    line-height : 1.6;
+
+    // background : rgba( 227, 227, 232, 1 );
+    // let's go with a white background for this site
+    background : rgba( 255, 255, 255, 1 );  
+
+    /*
+    @media all and ( max-width : $bp-480 ) {
+
+        background : rgba( 255, 255, 255, 1 );
+
+    }
+    */
+
+    @media all and ( max-width : $bp-320 ) {
+
+        overflow-x : scroll;
+
+    }
+
+} // end of body
+
+
+a {
+
+    color           : $blue-webkit-link;
+    text-decoration : none;
+
+} // end of a
+
+
+ul {
+
+    list-style : none;
+
+} // end of ul
+
+
+// w3schools said: " How To Create Responsive Images? If you want the image to scale
+// both up and down on responsiveness, set the CSS width property to 100% and height
+// to auto ( i.e. { width : 100%; height : auto; } ) " and " If you want an image to
+// scale down if it has to, but never scale up to be larger than its original size,
+// use max-width: 100%; ( i.e. { max-width : 100%; height : auto; } ) "
+img {
+
+    max-width : 100%;
+    height    : auto;
+
+} // end of image
+
+
+// center all
+.center-all {
+
+    display         : grid;
+    justify-content : center;
+    align-content   : center;
+    justify-items   : center;
+    align-items     : center;
+
+} // end of center-all
+
+
+// special styles to apply to all pages
+input::-moz-focus-inner { // remove input padding in FF
+
+	padding : 0;
+
+    border  : 0;
+
+}
+
+
+// make sure IE10 works in snap mode
+@-ms-viewport {
+
+    width : device-width;
+
+}
+
+
+
+// ==============================
+// MIXINS
+// ==============================
+
+
+// ==============================
+// BUTTON MIXIN
+// ==============================
+
+@mixin button {
+
+    padding : 1.8rem 3.0rem;
+
+    border        : none; // get rid of the default border
+    border-radius : 0; // get rid of the default radius
+
+    outline : none;
+
+    font-family    : $font-primary-2;
+    font-size      : 1.5rem;
+    color          : rgba( 255, 255, 255, 1 );
+    text-align     : center;
+    text-transform : uppercase;
+
+    background : $blue-500;
+
+    transition : all 0.2s ease-out;
+    cursor     : pointer;
+
+    &:hover {
+
+        background : $blue-600;
+
+    }
+
+} // end of @mixin button
+
+
+
+// ==============================
+// FORM LABEL MIXIN
+// ==============================
+
+@mixin shrinkLabel {
+
+    top : -20px;
+
+    font-size : 1.4rem;
+    color     : $gray-700;
+
+}
+

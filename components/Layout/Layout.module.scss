@@ -1,0 +1,54 @@
+
+
+// ==============================
+// PARTIAL IMPORTS
+// ==============================
+
+@import '../../styles/_responsive_breakpoints.scss';
+
+
+.layoutContainer {
+
+    display               : grid;
+    grid-template-rows    : 160px                                       // row 1 - 2   ( row 1 )
+                            minmax( calc(100vh - 245px), min-content )  // row 2 - 3   ( row 2 ) ( minmax( ... ) makes the footer sticky )
+                            85px;                                       // row 3 - 4   ( row 3 )
+
+    grid-template-columns : minmax( 6rem, 1fr )                        // col 1 - 2    ( column 1 )
+                            repeat( 10, minmax( min-content, 12rem ) ) // col 2 - 12   ( column 2 - 11 )
+                            minmax( 6rem, 1fr );                       // col 12 - 13  ( column 12 )
+
+    // now let's place all the grid items inside our layout by setting the " grid-area " property
+    // for each grid item
+    grid-template-areas   :
+    // col 1   col 2   col 3    col 4    col 5    col 6    col 7    col 8    col 9    col 10   col 11   col 12
+    "  header  header  header   header   header   header   header   header   header   header   header   header "  // row 1
+    "  .       main    main     main     main     main     main     main     main     main     main     .      "  // row 2
+    "  footer  footer  footer   footer   footer   footer   footer   footer   footer   footer   footer   footer "; // row 3
+
+    // remember, . = full bleed
+    justify-content : center;
+
+    @media all and ( max-width : $bp-1280 ) {
+
+        grid-template-rows    : 160px                                       // row 1 - 2   ( row 1 )
+                                minmax( calc(100vh - 245px), min-content )  // row 2 - 3   ( row 2 ) ( minmax( ... ) makes the footer sticky )
+                                85px;                                       // row 3 - 4   ( row 3 )
+
+    }
+
+    @media all and ( max-width : $bp-480 ) {
+
+        grid-template-columns : 4.4rem                                     // col 1 - 2    ( column 1 )
+                                repeat( 10, minmax( min-content, 12rem ) ) // col 2 - 12   ( column 2 - 11 )
+                                4.4rem                                     // col 12 - 13  ( column 12 )
+
+    }
+
+    main {
+        grid-area : main;
+        margin    : 3.0rem 0 3.0rem 0;
+    }
+
+}
+
