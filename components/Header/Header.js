@@ -4,7 +4,7 @@
 import Link from 'next/link';
 // import in Font Awesome
 import { SiNextDotJs } from 'react-icons/si';
-// import in our styleshee
+// import in our stylesheet
 import styles from './Header.module.scss';
 
 
