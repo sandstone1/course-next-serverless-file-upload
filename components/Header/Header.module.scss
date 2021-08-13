@@ -12,7 +12,7 @@
 .headerContainer {
 
     grid-area       : header;
-    display         : flex;
+    display         : grid;
     align-items     : center;
     justify-content : center;
     margin          : 0 0 0 0;
@@ -20,6 +20,8 @@
     background : $gray-background-1;
 
     > h4 > a {
+
+        display: block;
 
         padding : 1.0rem 2rem;
 
