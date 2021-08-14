@@ -14,9 +14,17 @@
 
 // export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013';
 
-// use the line of code below and not
+// use the 2 lines of code below and not
 // " export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013'; "
 // since Vercel was not reading " https://course-next-serverless-file-upload.vercel.app/ "
 // and was instead using " http://localhost:3013 "
-export const API_URL = 'https://course-next-serverless-file-upload.vercel.app/' || 'http://localhost:3013';
+
+
+// export const API_URL = 'http://localhost:3013';
+
+
+// let's create an environment variable called " dev "
+const dev = process.env.NODE_ENV !== 'production';
+
+export const API_URL = dev ? 'http://localhost:3013' : 'https://course-next-serverless-file-upload.vercel.app/';
 

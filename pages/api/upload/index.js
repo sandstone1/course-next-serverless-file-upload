@@ -70,7 +70,7 @@ const handler = nc()
             // in case there is an error
 
             // in order for this path to work we have to create an uploads folder
-            file.mv( `/public/images/${ file.name }`, ( error ) => {
+            file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
 
                 // if the path does not exist
                 if ( error ) {
