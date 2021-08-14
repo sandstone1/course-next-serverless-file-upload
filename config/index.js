@@ -12,5 +12,5 @@
 
 // In your case, rename API_URL to NEXT_PUBLIC_API_URL, and use it. "
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5002';
+export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013';
 

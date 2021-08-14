@@ -2,7 +2,7 @@
 
 import nc from 'next-connect';
 // import in express fileupload
-import fileUpload from 'express-fileUpload';
+import fileUpload from 'express-fileupload';
 // import in the path module and this is a node.js module to work with file paths
 import path from 'path';
 // __dirname doesn't work in next.js so use the code below and nextDirname results in
