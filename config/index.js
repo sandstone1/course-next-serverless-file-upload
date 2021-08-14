@@ -19,10 +19,6 @@
 // since Vercel was not reading " https://course-next-serverless-file-upload.vercel.app/ "
 // and was instead using " http://localhost:3013 "
 
-
-// export const API_URL = 'http://localhost:3013';
-
-
 // let's create an environment variable called " dev "
 const dev = process.env.NODE_ENV !== 'production';
 

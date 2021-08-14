@@ -70,7 +70,17 @@ const handler = nc()
             // in case there is an error
 
             // in order for this path to work we have to create an uploads folder
-            file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
+
+            // 1 -
+            // for production, replace
+            // " file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => { " with
+            // " file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`, ( error ) => { "
+
+            // file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
+            file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`, ( error ) => {
+
+            // End of 1 -
+
 
                 // if the path does not exist
                 if ( error ) {
@@ -86,11 +96,20 @@ const handler = nc()
 
                     // remember for next.js we have to start the filePath after the " public "
                     // folder so in this case we start the filePath at " '/images' "
+
+
+                    // 1 - continued
+                    // in production, replace " filePath : `/images/${ file.name }` " with
+                    // " filePath : `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }` "
+
+
+                    // End of 1 -
+
                     res
                         .status( 200 )
                         .json( {
                             fileName : file.name,
-                            filePath : `/images/${ file.name }`
+                            filePath : `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`
                         } );
 
                 }
