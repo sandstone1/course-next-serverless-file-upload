@@ -22,5 +22,5 @@
 // let's create an environment variable called " dev "
 const dev = process.env.NODE_ENV !== 'production';
 
-export const API_URL = dev ? 'http://localhost:3013' : 'https://course-next-serverless-file-upload.vercel.app/';
+export const API_URL = dev ? 'http://localhost:3013' : 'https://course-next-serverless-file-upload.vercel.app';
 
