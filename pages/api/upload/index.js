@@ -109,6 +109,7 @@ const handler = nc()
                         .status( 200 )
                         .json( {
                             fileName : file.name,
+                            // filePath : `/images/${ file.name }`
                             filePath : `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`
                         } );
 

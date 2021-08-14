@@ -99,6 +99,17 @@ const FileUpload = () => {
         // way the formData object acts like a form
         const formData = new FormData();
 
+
+        // 1 -
+
+        formData.append( 'upload_preset', 'next-serverless-file-upload' );
+
+
+        // End of 1 -
+
+
+
+
         // then we will append some information to the formData object and the key will be
         // " file " and the value will be the file that is in our state
         formData.append( 'file', file );
