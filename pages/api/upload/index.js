@@ -77,7 +77,7 @@ const handler = nc()
             // " file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`, ( error ) => { "
 
             // file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
-            file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`, ( error ) => {
+            file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${file.name}`, ( error ) => {
 
             // End of 1 -
 
@@ -110,7 +110,7 @@ const handler = nc()
                         .json( {
                             fileName : file.name,
                             // filePath : `/images/${ file.name }`
-                            filePath : `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`
+                            filePath : `http://res.cloudinary.com/sandstone1/image/upload/${file.name}`
                         } );
 
                 }
