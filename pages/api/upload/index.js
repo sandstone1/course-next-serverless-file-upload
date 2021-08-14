@@ -74,10 +74,10 @@ const handler = nc()
             // 1 -
             // for production, replace
             // " file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => { " with
-            // " file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }`, ( error ) => { "
+            // " file.mv( `https://api.cloudinary.com/v1_1/sandstone1/image/upload/${ file.name }`, ( error ) => { "
 
             // file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
-            file.mv( `http://res.cloudinary.com/sandstone1/image/upload/${file.name}`, ( error ) => {
+            file.mv( `https://api.cloudinary.com/v1_1/sandstone1/image/upload/${ file.name }`, ( error ) => {
 
             // End of 1 -
 
@@ -100,7 +100,7 @@ const handler = nc()
 
                     // 1 - continued
                     // in production, replace " filePath : `/images/${ file.name }` " with
-                    // " filePath : `http://res.cloudinary.com/sandstone1/image/upload/${ file.name }` "
+                    // " filePath : `https://api.cloudinary.com/v1_1/sandstone1/image/upload/${ file.name }` "
 
 
                     // End of 1 -
@@ -110,7 +110,7 @@ const handler = nc()
                         .json( {
                             fileName : file.name,
                             // filePath : `/images/${ file.name }`
-                            filePath : `http://res.cloudinary.com/sandstone1/image/upload/${file.name}`
+                            filePath : `https://api.cloudinary.com/v1_1/sandstone1/image/upload/${ file.name }`
                         } );
 
                 }
