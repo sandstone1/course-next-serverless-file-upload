@@ -12,7 +12,11 @@
 
 // In your case, rename API_URL to NEXT_PUBLIC_API_URL, and use it. "
 
-export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013';
+// export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013';
 
-//export const API_URL = 'https://course-next-serverless-file-upload.vercel.app/' || 'http://localhost:3013';
+// use the line of code below and not
+// " export const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3013'; "
+// since Vercel was not reading " https://course-next-serverless-file-upload.vercel.app/ "
+// and was instead using " http://localhost:3013 "
+export const API_URL = 'https://course-next-serverless-file-upload.vercel.app/' || 'http://localhost:3013';
 
