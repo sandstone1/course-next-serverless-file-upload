@@ -5,7 +5,7 @@ import nc from 'next-connect';
 import fileUpload from 'express-fileupload';
 // import in the path module and this is a node.js module to work with file paths
 import path from 'path';
-// __dirname doesn't work in next.js so use the code below and nextDirname results in
+// __dirname doesn't work in next.js so use the code below and then __dirname results in
 // " /Applications/MAMP/htdocs/stoneburyhomes/misc/brad_traversy/next_file_upload/frontend "
 // which is what we want
 const __dirname = path.resolve( process.cwd(), '' );
@@ -70,7 +70,7 @@ const handler = nc()
             // in case there is an error
 
             // in order for this path to work we have to create an uploads folder
-            file.mv( `${ __dirname }/public/images/${ file.name }`, ( error ) => {
+            file.mv( `/public/images/${ file.name }`, ( error ) => {
 
                 // if the path does not exist
                 if ( error ) {
